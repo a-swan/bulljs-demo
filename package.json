@@ -4,7 +4,9 @@
   "description": "Demo BullJS app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon ./server/index.js",
+    "client": "node client/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,17 @@
   "bugs": {
     "url": "https://github.com/a-swan/bulljs-demo/issues"
   },
-  "homepage": "https://github.com/a-swan/bulljs-demo#readme"
+  "homepage": "https://github.com/a-swan/bulljs-demo#readme",
+  "nodemonConfig": {
+    "ignore": [
+      "client/*"
+    ]
+  },
+  "dependencies": {
+    "bull": "^4.8.2",
+    "dotenv": "^16.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
 }
